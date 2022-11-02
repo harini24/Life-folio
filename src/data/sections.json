@@ -1,0 +1,34 @@
+[
+  {
+    "name": "About me",
+    "key": "aboutMe"
+  },
+  {
+    "name": "Experience",
+    "key": "experince"
+  },
+  {
+    "name": "Projects",
+    "key": "projects"
+  },
+  {
+    "name": "Education",
+    "key": "education"
+  },
+  {
+    "name": "Skills",
+    "key": "skills"
+  },
+  {
+    "name": "Achievements",
+    "key": "achievements"
+  },
+  {
+    "name": "Certifications",
+    "key": "certifications"
+  },
+  {
+    "name": "Contact",
+    "key": "contact"
+  }
+]
