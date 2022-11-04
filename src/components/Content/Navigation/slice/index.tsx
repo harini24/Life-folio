@@ -2,7 +2,7 @@
 
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ISectionsState } from "./types";
-import sections from "../../../data/sections.json";
+import sections from "../../../../data/sections.json";
 const initialState: ISectionsState = {
   sections: sections,
   currentSection: "aboutMe",

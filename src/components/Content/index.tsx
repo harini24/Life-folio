@@ -1,5 +1,5 @@
 import { Box, styled } from "@mui/material";
-import { NavigationList } from "../Navigation";
+import { NavigationList } from "./Navigation";
 const Wrapper = styled(Box)(() => ({
   width: "85%",
   height: "85vh",

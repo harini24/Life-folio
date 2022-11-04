@@ -1,4 +1,4 @@
-import { ISectionsState } from "../components/Navigation/slice/types";
+import { ISectionsState } from "../components/Content/Navigation/slice/types";
 
 export interface IRootState {
   sections?: ISectionsState;

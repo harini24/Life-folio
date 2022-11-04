@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { combineReducers } from 'redux'
-import sections from '../components/Navigation/slice'
+import sections from '../components/Content/Navigation/slice'
 const reducer = combineReducers({
     sections
   })

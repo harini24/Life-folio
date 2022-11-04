@@ -1,6 +1,6 @@
 import { Box, styled } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { IRootState } from "../../store/types";
+import { IRootState } from "../../../store/types";
 import { sectionImages } from "./untils";
 const NavigationWrapper = styled(Box)(() => ({
   display: "flex",
