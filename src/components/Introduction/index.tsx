@@ -2,7 +2,7 @@ import { styled, Box } from "@mui/material";
 import { StyleConstants } from "../../styles/StyleConstants";
 
 const IntroductionContainer = styled(Box)(() => ({
-  height: "100%",
+  height: "15vh",
   width: "100%",
   display: "flex",
   alignItems: "center",

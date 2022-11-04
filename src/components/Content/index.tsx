@@ -2,16 +2,15 @@ import { Box, styled } from "@mui/material";
 import { NavigationList } from "../Navigation";
 const Wrapper = styled(Box)(() => ({
   width: "85%",
+  height: "85vh",
   background: "yellow",
-  height: "100vh",
   margin: "0 auto",
+  display: "flex",
 }));
 export const ContentContainer = () => {
   return (
     <Wrapper>
-      <Box>
-        <NavigationList />
-      </Box>
+      <NavigationList />
       <Box></Box>
     </Wrapper>
   );
