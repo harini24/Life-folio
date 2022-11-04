@@ -1,7 +1,8 @@
 import { Box, styled } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../store/types";
-import { sectionImages } from "./untils";
+import { sectionImages } from "../utils";
+import { setCurrentSection } from "./slice";
 const NavigationWrapper = styled(Box)(() => ({
   display: "flex",
   flexDirection: "column",
@@ -24,6 +25,7 @@ const NavWrapper = styled(Box)(() => ({
   },
 }));
 export const NavigationList = () => {
+  const dispatch = useDispatch();
   const sections =
     useSelector((state: IRootState) => state.sections?.sections) || [];
   console.log(sections);
@@ -32,7 +34,7 @@ export const NavigationList = () => {
       {sections
         .filter((sec) => !sec?.hide)
         .map((sec) => (
-          <NavWrapper>
+          <NavWrapper onClick={() => dispatch(setCurrentSection(sec.key))}>
             <img src={sectionImages[sec.key]} alt={sec.key} />
           </NavWrapper>
         ))}

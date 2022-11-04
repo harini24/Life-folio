@@ -1,0 +1,43 @@
+[
+  {
+    "span": "2021 September -  current",
+    "company": "Securin",
+    "linkedIn": "https://www.linkedin.com/company/securin/",
+    "twitter": "https://twitter.com/Securin_io",
+    "location": "Chennai, Tamil Nadu",
+    "progress": [
+      {
+        "role": "Associate Software Engineer - 2",
+        "span": "2022 April - current",
+        "descriptions": [
+          "test jdjksfhds q",
+          "sdskhdush shdushfud udhfuhdsfyuds dfyudysfd ydfysdyu"
+        ]
+      },
+      {
+        "role": "Associate Software Engineer - 1",
+        "span": "2021 September - 2022 April",
+        "descriptions": [
+          "Led complete revamp of existing multiple Jquery pages of application into React, adhering to best and standard practices"
+        ]
+      }
+    ]
+  },
+  {
+    "span": "2019 July - 2021 September",
+    "company": "Verizon",
+    "location": "Chennai, Tamil Nadu",
+    "linkedIn": "https://www.linkedin.com/company/verizon/",
+    "twitter": "https://twitter.com/Verizon",
+    "progress": [
+      {
+        "role": "Software development Engrg",
+        "span": "2019 July - 2021 September",
+        "descriptions": [
+          "Designed and developed Guided support(GIF Integration), used in retail stores to generate visual and step by step solution to customer queries and issues",
+          "Boosted efficiencies in retail stores by developing feature Click to Chat, connecting retail agents with core agent dynamically within chatbots, reducing queue time of customers."
+        ]
+      }
+    ]
+  }
+]
