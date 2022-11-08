@@ -1,4 +1,5 @@
-import { Box } from "@mui/material";
+import { Box, styled, Button } from "@mui/material";
+import ProjectImg from "../../../assets/project.jpg";
 interface project {
   name?: string;
   description?: string;
@@ -8,6 +9,22 @@ interface project {
 interface Prop {
   project: project;
 }
+
+const InfoWrapper = styled(Box)(() => ({
+  "& .name": {
+    marginBottom: 15,
+  },
+}));
+const ProjectWrapper = styled(Box)(() => ({
+  display: "flex",
+  marginBottom: "3rem",
+}));
+const ImageBox = styled(Box)(() => ({
+  marginRight: 10,
+  "& img": {
+    width: 400,
+  },
+}));
 export const Project = ({ project }: Prop) => {
   const {
     name = "",
@@ -16,13 +33,18 @@ export const Project = ({ project }: Prop) => {
     demoLink = "",
   } = project;
   return (
-    <Box>
-      <Box>
-        <div>{name}</div>
+    <ProjectWrapper>
+      <ImageBox>
+        <img src={ProjectImg} />
+      </ImageBox>
+      <InfoWrapper>
+        <div className="name">{name}</div>
         <div>{description}</div>
-        <div></div>
-      </Box>
-      <Box></Box>
-    </Box>
+        <div>
+          <Button>Source Code</Button>
+          <Button>Demo</Button>
+        </div>
+      </InfoWrapper>
+    </ProjectWrapper>
   );
 };
