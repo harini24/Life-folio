@@ -9,6 +9,7 @@ import Contact from "../../assets/contact.png";
 import { AboutMe } from "./AboutMe";
 import ExperienceContainer from "./Experience";
 import { ProjectsContainer } from "./Projects";
+import { EducationContainer } from "./Education";
 
 interface ISectionImages {
   [key: string]: string | undefined;
@@ -21,7 +22,7 @@ export const sectionsInfo: ISectionsInfo = {
   aboutMe: { src: Person, component: <AboutMe /> },
   experience: { src: Experience, component: <ExperienceContainer /> },
   projects: { src: Projects, component: <ProjectsContainer /> },
-  education: { src: Projects, component: <></> },
+  education: { src: Projects, component: <EducationContainer /> },
   achievements: { src: Achievements, component: <></> },
   certifications: { src: Certifications, component: <></> },
   contact: { src: Contact, component: <></> },
