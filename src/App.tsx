@@ -1,10 +1,10 @@
 import { ContentContainer } from "./components/Content";
-import { Introduction } from "./components/Introduction";
+import { Header } from "./components/Header";
 
 function App() {
   return (
     <div className="app">
-      <Introduction />
+      <Header />
       <ContentContainer />
     </div>
   );

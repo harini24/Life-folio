@@ -16,7 +16,7 @@ const IntroInfoWrapper = styled(Box)(({ theme }) => ({
     padding: 20,
   },
 }));
-export const Introduction = () => {
+export const Header = () => {
   return (
     <IntroductionContainer>
       <IntroInfoWrapper>
