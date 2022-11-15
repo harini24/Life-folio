@@ -28,7 +28,7 @@ const SkillListWrapper = styled(Box)(() => ({
     borderRadius: "50%",
     position: "absolute",
     background:'#bcd1e3',
-    top: 21,
+    top: 23,
     "& img": {
       height: 58,
       width: 58,
