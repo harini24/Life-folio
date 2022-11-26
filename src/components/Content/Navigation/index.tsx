@@ -3,11 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../store/types";
 import { sectionImages } from "../utils";
 import { setCurrentSection } from "./slice";
-const NavigationWrapper = styled(Box)(() => ({
+const NavigationWrapper = styled(Box)(({theme}) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   padding: "0 20px",
+  [theme.breakpoints.down("md")]: {
+    flexDirection: 'row',
+  },
 }));
 const NavWrapper = styled(Box)(() => ({
   margin: "10px 0",

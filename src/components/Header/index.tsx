@@ -1,17 +1,15 @@
 import { styled, Box } from "@mui/material";
 import { StyleConstants } from "../../styles/StyleConstants";
 
-const IntroductionContainer = styled(Box)(() => ({
-  position:'fixed',
-  height: "10vh",
+const IntroductionContainer = styled(Box)(({ theme }) => ({
+  position: "fixed",
+  height: 84,
   width: "100%",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: "#6489a7",
-  top:0
-}));
-const IntroInfoWrapper = styled(Box)(({ theme }) => ({
+  top: 0,
   fontSize: "2em",
   [theme.breakpoints.down("sm")]: {
     fontSize: "2em",
@@ -21,9 +19,7 @@ const IntroInfoWrapper = styled(Box)(({ theme }) => ({
 export const Header = () => {
   return (
     <IntroductionContainer>
-      <IntroInfoWrapper>
-       (Lif)E - portfolio of Harini Sivakumar
-      </IntroInfoWrapper>
+      (Lif)E - portfolio of Harini Sivakumar
     </IntroductionContainer>
   );
 };
