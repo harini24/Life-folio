@@ -1,11 +1,16 @@
 import { Box } from "@mui/material";
 import { SectionWrapper, TitleWrapper } from "../../../styles/sectionStyles";
-
-export const CertidicationsContainer = () => {
+import { Certification } from "./Certification";
+import Certifications from "./Certifications.json";
+export const CertificationsContainer = () => {
   return (
     <SectionWrapper>
       <TitleWrapper>LICENSES & CERTIFICATIONS</TitleWrapper>
-      <Box></Box>
+      <Box>
+        {Certifications.map((certficate) => (
+          <Certification certficate={certficate} />
+        ))}
+      </Box>
     </SectionWrapper>
   );
 };

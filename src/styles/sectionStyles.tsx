@@ -4,7 +4,7 @@ export const SectionWrapper = styled(Box)(() => ({
   flexDirection: "column",
   justifyContent: "center",
   marginLeft: 45,
-  width:800
+  width:800,
 }));
 
 export const TitleWrapper = styled(Box)(() => ({

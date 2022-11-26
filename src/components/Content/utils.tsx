@@ -11,6 +11,8 @@ import ExperienceContainer from "./Experience";
 import { ProjectsContainer } from "./Projects";
 import { EducationContainer } from "./Education";
 import { SkillsContainer } from "./Skills";
+import { CertificationsContainer } from "./Certifications";
+import { ContactContainer } from "./Contact";
 
 interface ISectionImages {
   [key: string]: string | undefined;
@@ -26,8 +28,11 @@ export const sectionsInfo: ISectionsInfo = {
   education: { src: Projects, component: <EducationContainer /> },
   skills: { src: Skills, component: <SkillsContainer /> },
   achievements: { src: Achievements, component: <></> },
-  certifications: { src: Certifications, component: <></> },
-  contact: { src: Contact, component: <></> },
+  certifications: {
+    src: Certifications,
+    component: <CertificationsContainer />,
+  },
+  contact: { src: Contact, component: <ContactContainer /> },
 };
 export const sectionImages: ISectionImages = {
   aboutMe: Person,

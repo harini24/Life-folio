@@ -34,9 +34,6 @@ export const Project = ({ project }: Prop) => {
   } = project;
   return (
     <ProjectWrapper>
-      <ImageBox>
-        <img src={ProjectImg} />
-      </ImageBox>
       <InfoWrapper>
         <div className="name">{name}</div>
         <div>{description}</div>
@@ -45,6 +42,9 @@ export const Project = ({ project }: Prop) => {
           <Button>Demo</Button>
         </div>
       </InfoWrapper>
+      <ImageBox>
+        <img src={ProjectImg} />
+      </ImageBox>
     </ProjectWrapper>
   );
 };

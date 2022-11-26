@@ -3,9 +3,7 @@ import { NavigationList } from "./Navigation";
 import { SectionsRoot } from "./SectionsRoot";
 const Wrapper = styled(Box)(() => ({
   width: "85%",
-  height: "90vh",
-  // background: "yellow",
-  margin: "0 auto",
+  margin: "10vh auto 0",
   display: "flex",
   justifyContent: "center",
 }));
