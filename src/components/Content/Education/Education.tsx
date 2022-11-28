@@ -39,6 +39,9 @@ const EducationWrapper = styled(Box)(({ theme }) => ({
     border: "1px solid black",
     padding: 15,
     width: 450,
+    [theme.breakpoints.down("md")]: {
+      width: 350,
+    },
     boxSizing: "border-box",
   },
   [theme.breakpoints.down("md")]: {

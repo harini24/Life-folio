@@ -1,17 +1,23 @@
 import { Box, styled, Button } from "@mui/material";
-const CertificationWrapper = styled(Box)(() => ({
+const CertificationWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   marginBottom: "3rem",
+  [theme.breakpoints.down("md")]: {
+    flexDirection: "column",
+  },
 }));
 const InfoWrapper = styled(Box)(() => ({
   "& .name": {
     marginBottom: 15,
   },
 }));
-const ImageBox = styled(Box)(() => ({
+const ImageBox = styled(Box)(({ theme }) => ({
   marginRight: 10,
   "& img": {
     width: 400,
+    [theme.breakpoints.down("sm")]: {
+      width: 350,
+    },
   },
 }));
 interface certficate {

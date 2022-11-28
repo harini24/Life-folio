@@ -63,8 +63,11 @@ const CompanyWrapper = styled(Box)(({ theme }) => ({
     },
   },
 }));
-const DescriptionWrapper = styled(Box)(() => ({
+const DescriptionWrapper = styled(Box)(({ theme }) => ({
   width: 450,
+  [theme.breakpoints.down("sm")]: {
+    width: 370,
+  },
 }));
 interface Map {
   [key: string]: string | undefined;

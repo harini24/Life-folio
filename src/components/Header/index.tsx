@@ -12,8 +12,8 @@ const IntroductionContainer = styled(Box)(({ theme }) => ({
   top: 0,
   fontSize: "2em",
   [theme.breakpoints.down("sm")]: {
-    fontSize: "2em",
-    padding: 20,
+    // fontSize: "2em",
+    // padding: 20,
   },
 }));
 export const Header = () => {

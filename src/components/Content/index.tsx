@@ -12,7 +12,7 @@ const Wrapper = styled(Box)(({ theme }) => ({
     margin: 0,
   },
   "& .section": {
-    position: "fixed",
+    // position: "fixed",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -22,27 +22,24 @@ const Wrapper = styled(Box)(({ theme }) => ({
     padding: 0,
   },
   [theme.breakpoints.down("md")]: {
+    flexDirection:"column",
+    justifyContent: "flex-start",
+    alignItems: "center",
     "& .content": {
       marginTop: 104,
     },
   },
   [theme.breakpoints.up("md")]: {
     "& .content": {
-      marginLeft: 140,
+      // marginLeft: 140,
     },
   },
 }));
 export const ContentContainer = () => {
   return (
     <Wrapper>
-      <Grid container spacing={2} className="grid">
-        <Grid item xs={12} md={2} xl={4} className="section">
-          <NavigationList />
-        </Grid>
-        <Grid item xs={12} md={10} xl={8} className="content">
-          <SectionsRoot />
-        </Grid>
-      </Grid>
+      <NavigationList />
+      <SectionsRoot />
     </Wrapper>
   );
 };

@@ -3,16 +3,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../store/types";
 import { sectionImages } from "../utils";
 import { setCurrentSection } from "./slice";
-const NavigationWrapper = styled(Box)(({theme}) => ({
+const NavigationWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   padding: "0 20px",
   [theme.breakpoints.down("md")]: {
-    flexDirection: 'row',
+    padding: "0 8px",
+    flexDirection: "row",
   },
 }));
-const NavWrapper = styled(Box)(() => ({
+const NavWrapper = styled(Box)(({ theme }) => ({
   margin: "10px 0",
   height: 70,
   width: 70,

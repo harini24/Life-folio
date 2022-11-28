@@ -13,7 +13,7 @@ const SkillListWrapper = styled(Box)(() => ({
   alignItems: "center",
   flexDirection: "column",
   "& .skillType": {
-    width: "100%",
+    width: "80%",
     textAlign: "center",
     border: "1px solid black",
     background:'#bcd1e3',
