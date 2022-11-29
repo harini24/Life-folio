@@ -11,6 +11,7 @@ const IntroductionContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "#6489a7",
   top: 0,
   fontSize: "2em",
+  zIndex: 1,
   [theme.breakpoints.down("sm")]: {
     fontSize: "1.45em",
     fontWeight: 600,

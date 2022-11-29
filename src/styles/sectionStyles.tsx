@@ -4,7 +4,7 @@ export const customTheme = createTheme({
     values: {
       xs: 0,
       sm: 665,
-      md: 900,
+      md: 1075,
       lg: 1200,
       xl: 1536,
     },
@@ -13,16 +13,16 @@ export const customTheme = createTheme({
 export const SectionWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
-  marginLeft: 45,
+  marginTop: 75,
+  marginLeft: 75,
   width: 800,
   [theme.breakpoints.down("md")]: {
     width: 575,
-    margin:45
+    margin: 45,
   },
   [theme.breakpoints.down("sm")]: {
     width: 370,
-    margin:5
+    margin: "20px 5px 0",
   },
 }));
 

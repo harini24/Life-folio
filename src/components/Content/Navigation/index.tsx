@@ -1,13 +1,21 @@
 import { Box, styled } from "@mui/material";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../store/types";
 import { sectionImages } from "../utils";
 import { setCurrentSection } from "./slice";
+import Arrow from "../../../assets/arrow.png";
+import { useNavigationSize } from "../../../hooks/useNavigationSize";
+
 const NavigationWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
+  height:'100%',
+  backgroundColor: "aliceblue",
   padding: "0 20px",
+  position: "sticky",
+  top: 84,
   "& .nav-section": {
     display: "flex",
     flexDirection: "column",
@@ -34,6 +42,27 @@ const NavigationWrapper = styled(Box)(({ theme }) => ({
       width: 58,
     },
   },
+  "& .arrow": {
+    margin: "10px 0 0 ",
+    height: 70,
+    width: 70,
+    padding: 5,
+    borderRadius: "50%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    "& img": {
+      height: 58,
+      width: 58,
+    },
+  },
+  "& .before": {
+    transform: "rotate(180deg)",
+  },
+  "& .disabled": {
+    opacity: "0.1",
+    pointerEvents: "none",
+  },
   "& .active .nav-item": {
     backgroundColor: "#6489a7",
   },
@@ -42,7 +71,15 @@ const NavigationWrapper = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down("md")]: {
     padding: "0 8px",
+    zIndex: 1,
     flexDirection: "row",
+    width: "100%",
+    "& .before": {
+      transform: "rotate(90deg)",
+    },
+    "& .after": {
+      transform: "rotate(271deg)",
+    },
   },
 }));
 export const NavigationList = () => {
@@ -52,10 +89,26 @@ export const NavigationList = () => {
   const selectedSection =
     useSelector((state: IRootState) => state.sections?.currentSection) || "";
   console.log(sections);
+  const [start, setStart] = useState(0);
+  const limit = useNavigationSize();
+  console.log(
+    sections.filter((sec) => !sec?.hide).slice(start, start + 3),
+    start,
+    limit
+  );
   return (
     <NavigationWrapper>
+      {limit < sections.length && (
+        <Box
+          className={`arrow before ${start === 0 && "disabled"}`}
+          onClick={() => setStart((val) => val - 1)}
+        >
+          <img src={Arrow} />
+        </Box>
+      )}
       {sections
         .filter((sec) => !sec?.hide)
+        .slice(start, start + limit)
         .map((sec) => (
           <Box
             className={`nav-section ${selectedSection === sec.key && "active"}`}
@@ -69,6 +122,16 @@ export const NavigationList = () => {
             <div className="section-name">{sec.name}</div>
           </Box>
         ))}
+      {limit < sections.length && (
+        <Box
+          className={`arrow after ${
+            start === sections.length - limit && "disabled"
+          }`}
+          onClick={() => setStart((val) => val + 1)}
+        >
+          <img src={Arrow} />
+        </Box>
+      )}
     </NavigationWrapper>
   );
 };
