@@ -11,7 +11,7 @@ const NavigationWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  height:'100%',
+  height: "100%",
   backgroundColor: "aliceblue",
   padding: "0 20px",
   position: "sticky",
@@ -19,6 +19,9 @@ const NavigationWrapper = styled(Box)(({ theme }) => ({
   "& .nav-section": {
     display: "flex",
     flexDirection: "column",
+    "&:hover": {
+      transform: "scale(1.1)",
+    },
   },
   "& .section-name": {
     width: 84,
@@ -74,6 +77,9 @@ const NavigationWrapper = styled(Box)(({ theme }) => ({
     zIndex: 1,
     flexDirection: "row",
     width: "100%",
+    "& .nav-section": {
+      padding: "0 3px",
+    },
     "& .before": {
       transform: "rotate(90deg)",
     },
