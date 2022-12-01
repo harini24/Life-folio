@@ -7,7 +7,7 @@ export const EducationContainer = () => {
     <SectionWrapper>
       <TitleWrapper>EDUCATION</TitleWrapper>
       <Box>
-        <Grid container spacing={2}>
+        <Grid container spacing={3}>
           {education.map((edu, ind) => (
             <Grid item xs={12} key={ind}>
               <Education education={edu} ind={ind} />

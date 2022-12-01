@@ -1,14 +1,18 @@
 import { Box, styled, Button } from "@mui/material";
+import { StyleConstants } from "../../../styles/StyleConstants";
 const CertificationWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
-  marginBottom: "3rem",
+  marginBottom: StyleConstants.SPACE_BETWEEN_SECTIONS,
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
   },
 }));
 const InfoWrapper = styled(Box)(() => ({
+  paddingRight:15,
+  lineHeight:1.53,
   "& .name": {
     marginBottom: 15,
+    fontSize: StyleConstants.SIZE_ITEM_TITLE,
   },
 }));
 const ImageBox = styled(Box)(({ theme }) => ({
@@ -45,11 +49,23 @@ export const Certification = ({ certficate }: Prop) => {
   return (
     <CertificationWrapper>
       <InfoWrapper>
-        <div className="name">{name}</div>
-        <div>Org: {org}</div>
-        <div>Issued: {issued}</div>
-        {expiry && <div>Expiry: {expiry}</div>}
-        {credentialId && <div>Id: {credentialId}</div>}
+        <div className="name bold">{name}</div>
+        <div>
+          <b>Org:</b> {org}
+        </div>
+        <div>
+          <b>Issued:</b> {issued}
+        </div>
+        {expiry && (
+          <div>
+            <b>Expiry:</b> {expiry}
+          </div>
+        )}
+        {credentialId && (
+          <div>
+            <b>Id:</b> {credentialId}
+          </div>
+        )}
         <div>
           <Button>Certificate</Button>
         </div>

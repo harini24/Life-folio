@@ -6,6 +6,7 @@ import { sectionImages } from "../utils";
 import { setCurrentSection } from "./slice";
 import Arrow from "../../../assets/arrow.png";
 import { useNavigationSize } from "../../../hooks/useNavigationSize";
+import { StyleConstants } from "../../../styles/StyleConstants";
 
 const NavigationWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -15,8 +16,9 @@ const NavigationWrapper = styled(Box)(({ theme }) => ({
   backgroundColor: "aliceblue",
   padding: "0 20px",
   position: "sticky",
-  top: 84,
+  top: 85,
   "& .nav-section": {
+    padding: 8,
     display: "flex",
     flexDirection: "column",
     "&:hover": {
@@ -31,11 +33,12 @@ const NavigationWrapper = styled(Box)(({ theme }) => ({
     borderRadius: 10,
   },
   "& .nav-item": {
-    margin: "10px 0 0 ",
     height: 70,
     width: 70,
     padding: 5,
-    border: "2px solid #562783",
+    borderWidth: 2,
+    borderStyle: "solid",
+    borderColor: StyleConstants.SECTION_BORDER,
     borderRadius: "50%",
     display: "flex",
     justifyContent: "center",
@@ -48,7 +51,7 @@ const NavigationWrapper = styled(Box)(({ theme }) => ({
   "& .arrow": {
     margin: "10px 0 0 ",
     height: 70,
-    width: 70,
+    width: 84,
     padding: 5,
     borderRadius: "50%",
     display: "flex",
@@ -67,13 +70,13 @@ const NavigationWrapper = styled(Box)(({ theme }) => ({
     pointerEvents: "none",
   },
   "& .active .nav-item": {
-    backgroundColor: "#6489a7",
+    backgroundColor: StyleConstants.ACTIVE_SECTION,
   },
   "& .active .section-name": {
-    backgroundColor: "#6489a7",
+    backgroundColor: StyleConstants.ACTIVE_SECTION,
   },
   [theme.breakpoints.down("md")]: {
-    padding: "0 8px",
+    padding: 8,
     zIndex: 1,
     flexDirection: "row",
     width: "100%",
@@ -97,7 +100,6 @@ export const NavigationList = () => {
   const filteredSections = sections.filter((sec) => !sec?.hide);
   const [start, setStart] = useState(0);
   const limit = useNavigationSize();
-  console.log(limit);
   return (
     <NavigationWrapper>
       {limit < filteredSections.length && (
@@ -108,21 +110,19 @@ export const NavigationList = () => {
           <img src={Arrow} />
         </Box>
       )}
-      {filteredSections
-        .slice(start, start + limit)
-        .map((sec) => (
+      {filteredSections.slice(start, start + limit).map((sec) => (
+        <Box
+          className={`nav-section ${selectedSection === sec.key && "active"}`}
+        >
           <Box
-            className={`nav-section ${selectedSection === sec.key && "active"}`}
+            className="nav-item"
+            onClick={() => dispatch(setCurrentSection(sec.key))}
           >
-            <Box
-              className="nav-item"
-              onClick={() => dispatch(setCurrentSection(sec.key))}
-            >
-              <img src={sectionImages[sec.key]} alt={sec.key} />
-            </Box>
-            <div className="section-name">{sec.name}</div>
+            <img src={sectionImages[sec.key]} alt={sec.key} />
           </Box>
-        ))}
+          <div className="section-name">{sec.name}</div>
+        </Box>
+      ))}
       {limit < filteredSections.length && (
         <Box
           className={`arrow after ${

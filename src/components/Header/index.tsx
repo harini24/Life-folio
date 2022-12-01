@@ -8,13 +8,13 @@ const IntroductionContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: "#6489a7",
+  backgroundColor: StyleConstants.HEADER,
   top: 0,
   fontSize: "2em",
   zIndex: 1,
+  fontWeight: 600,
   [theme.breakpoints.down("sm")]: {
     fontSize: "1.45em",
-    fontWeight: 600,
   },
 }));
 export const Header = () => {

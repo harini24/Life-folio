@@ -1,5 +1,6 @@
 import { Box, styled, Button } from "@mui/material";
 import ProjectImg from "../../../assets/project.jpg";
+import { StyleConstants } from "../../../styles/StyleConstants";
 interface project {
   name?: string;
   description?: string;
@@ -11,14 +12,16 @@ interface Prop {
 }
 
 const InfoWrapper = styled(Box)(() => ({
-  "& .name": {},
+  "& .name": {
+    fontSize: StyleConstants.SIZE_ITEM_TITLE,
+  },
   "& .desc": {
     padding: 10,
   },
 }));
 const ProjectWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
-  marginBottom: "3rem",
+  marginBottom: StyleConstants.SPACE_BETWEEN_SECTIONS,
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
   },
@@ -42,7 +45,7 @@ export const Project = ({ project }: Prop) => {
   return (
     <ProjectWrapper>
       <InfoWrapper>
-        <div className="name">{name}</div>
+        <div className="name bold">{name}</div>
         <div className="desc">{description}</div>
         <div>
           <Button>Source Code</Button>

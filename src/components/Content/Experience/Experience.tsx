@@ -3,6 +3,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Securin from "../../../assets/securin.jpg";
 import Verizon from "../../../assets/verizon.jpg";
+import { StyleConstants } from "../../../styles/StyleConstants";
 interface Experience {
   span?: string;
   company?: string;
@@ -18,9 +19,12 @@ interface Prop {
 const Wrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
-  padding: "0 0 20px",
+  marginBottom: StyleConstants.SPACE_BETWEEN_SECTIONS,
   "& .span": {
     padding: "0 0 6px",
+  },
+  "& .description-wrapper": {
+    paddingBottom: 10,
   },
   "& .description": {
     padding: "0 0 6px 12px",
@@ -50,6 +54,7 @@ const CompanyWrapper = styled(Box)(({ theme }) => ({
     },
   },
   "& .employment-info": {
+    fontSize: StyleConstants.SIZE_ITEM_TITLE,
     width: 250,
     marginRight: 10,
     display: "flex",
@@ -93,7 +98,7 @@ const Experience = ({ experience }: Prop) => {
           <img src={logo[company.toLowerCase()]} alt="logo" />
         </div>
         <div className="employment-info">
-          <div>{company}</div>
+          <div className="name bold">{company}</div>
           <div>{location}</div>
           <div>{span}</div>
           <div>
@@ -114,9 +119,9 @@ const Experience = ({ experience }: Prop) => {
         {progress.map((prog: any) => {
           return (
             <>
-              <div className="role">{prog.role}</div>
+              <div className="role bold">{prog.role}</div>
               <div className="span">{prog.span}</div>
-              <div>
+              <div className="description-wrapper">
                 {prog.descriptions.map((desc: string) => (
                   <div className="description">
                     <div className="bullet" />

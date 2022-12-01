@@ -8,7 +8,27 @@ body {
   height: 100%;
   background-color: aliceblue;
 }
+.app::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 5px;
+}
 
+.app::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+.app::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background-color:  rgb(100, 137, 167);
+}
+.app::-webkit-scrollbar-button {
+  display:none;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -19,4 +39,8 @@ code {
 }
 .app{
   height: 100%;
+}
+
+.bold{
+  font-weight: bold;
 }

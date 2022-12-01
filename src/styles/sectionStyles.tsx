@@ -1,15 +1,5 @@
-import { styled, Box, createTheme } from "@mui/material";
-export const customTheme = createTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 665,
-      md: 1075,
-      lg: 1200,
-      xl: 1536,
-    },
-  },
-});
+import { styled, Box } from "@mui/material";
+
 export const SectionWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
@@ -29,4 +19,5 @@ export const SectionWrapper = styled(Box)(({ theme }) => ({
 export const TitleWrapper = styled(Box)(() => ({
   fontSize: "2em",
   paddingBottom: 50,
+  fontWeight: 600,
 }));
