@@ -13,7 +13,7 @@ export const customTheme = createTheme({
 export const SectionWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
-  marginTop: 75,
+  marginTop: 45,
   marginLeft: 75,
   width: 800,
   [theme.breakpoints.down("md")]: {

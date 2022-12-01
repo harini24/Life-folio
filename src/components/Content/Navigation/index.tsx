@@ -94,17 +94,13 @@ export const NavigationList = () => {
     useSelector((state: IRootState) => state.sections?.sections) || [];
   const selectedSection =
     useSelector((state: IRootState) => state.sections?.currentSection) || "";
-  console.log(sections);
+  const filteredSections = sections.filter((sec) => !sec?.hide);
   const [start, setStart] = useState(0);
   const limit = useNavigationSize();
-  console.log(
-    sections.filter((sec) => !sec?.hide).slice(start, start + 3),
-    start,
-    limit
-  );
+  console.log(limit);
   return (
     <NavigationWrapper>
-      {limit < sections.length && (
+      {limit < filteredSections.length && (
         <Box
           className={`arrow before ${start === 0 && "disabled"}`}
           onClick={() => setStart((val) => val - 1)}
@@ -112,8 +108,7 @@ export const NavigationList = () => {
           <img src={Arrow} />
         </Box>
       )}
-      {sections
-        .filter((sec) => !sec?.hide)
+      {filteredSections
         .slice(start, start + limit)
         .map((sec) => (
           <Box
@@ -128,10 +123,10 @@ export const NavigationList = () => {
             <div className="section-name">{sec.name}</div>
           </Box>
         ))}
-      {limit < sections.length && (
+      {limit < filteredSections.length && (
         <Box
           className={`arrow after ${
-            start === sections.length - limit && "disabled"
+            start === filteredSections.length - limit && "disabled"
           }`}
           onClick={() => setStart((val) => val + 1)}
         >
