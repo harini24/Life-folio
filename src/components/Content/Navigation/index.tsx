@@ -11,8 +11,7 @@ import { StyleConstants } from "../../../styles/StyleConstants";
 const NavigationWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
-  height: "100%",
+  justifyContent: "flex-start",
   backgroundColor: "aliceblue",
   padding: "0 20px",
   position: "sticky",
@@ -80,6 +79,7 @@ const NavigationWrapper = styled(Box)(({ theme }) => ({
     zIndex: 1,
     flexDirection: "row",
     width: "100%",
+    justifyContent: "center",
     "& .nav-section": {
       padding: "0 3px",
     },
@@ -112,7 +112,7 @@ export const NavigationList = () => {
       )}
       {filteredSections.slice(start, start + limit).map((sec) => (
         <Box
-        key={sec.key}
+          key={sec.key}
           className={`nav-section ${selectedSection === sec.key && "active"}`}
         >
           <Box

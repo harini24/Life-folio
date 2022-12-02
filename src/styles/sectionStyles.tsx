@@ -4,9 +4,11 @@ import { StyleConstants } from "./StyleConstants";
 export const SectionWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
-  marginTop: 45,
-  marginLeft: 75,
+  justifyContent: "center",
   width: 800,
+  height: "100%",
+  padding: "0 0 0 45px",
+  boxSizing: "border-box",
   [theme.breakpoints.down("md")]: {
     width: 575,
     margin: 45,

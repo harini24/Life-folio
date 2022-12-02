@@ -8,23 +8,20 @@ body {
   height: 100%;
   background-color: aliceblue;
 }
-::-webkit-scrollbar-track
-{
-	background-color: aliceblue;
+::-webkit-scrollbar-track {
+  background-color: aliceblue;
 }
 
-::-webkit-scrollbar
-{
-	width: 5px;
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-::-webkit-scrollbar-thumb
-{
-	border-radius: 5px;
-	background-color:  rgb(100, 137, 167);
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgb(100, 137, 167);
 }
 ::-webkit-scrollbar-button {
-  display:none;
+  display: none;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -34,10 +31,12 @@ code {
   height: 100%;
   width: 100%;
 }
-.app{
-  height: 100%;
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
