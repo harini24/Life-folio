@@ -1,4 +1,4 @@
-import { Box, styled } from "@mui/material";
+import { Box, Link, styled } from "@mui/material";
 import { SectionWrapper, TitleWrapper } from "../../../styles/sectionStyles";
 import Contact from "./Contact.json";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -9,7 +9,15 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import { useEffect } from "react";
 const ContactWrapper = styled(Box)(() => ({
   padding: "0 20px",
-  "& div": {
+  "& .links": {
+    display: "flex",
+    padding: 12,
+    "& svg": {
+      paddingRight: 12,
+      fontSize: 32,
+    },
+  },
+  "& .email": {
     padding: 12,
     display: "flex",
     alignItems: "center",
@@ -20,13 +28,7 @@ const ContactWrapper = styled(Box)(() => ({
   },
 }));
 export const ContactContainer = () => {
-  const {
-    emailId = "",
-    mobileNum = "",
-    linkedIn = "",
-    twitter = "",
-    github = "",
-  } = Contact;
+  const { emailId = "", linkedIn = "", twitter = "", github = "" } = Contact;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -36,31 +38,34 @@ export const ContactContainer = () => {
     <SectionWrapper>
       <TitleWrapper>Contact Info</TitleWrapper>
       <ContactWrapper>
-        {mobileNum && (
-          <div>
-            <PhoneIcon /> {mobileNum}
-          </div>
-        )}
         {emailId && (
-          <div>
+          <div className="email">
             <EmailIcon /> {emailId}
           </div>
         )}
-        {github && (
-          <div>
-            <GitHubIcon /> {github}
-          </div>
-        )}
-        {linkedIn && (
-          <div>
-            <LinkedInIcon /> {linkedIn}
-          </div>
-        )}
-        {twitter && (
-          <div>
-            <TwitterIcon /> {twitter}
-          </div>
-        )}
+        <div className="links">
+          {github && (
+            <div>
+              <Link href={github} target="_blank" style={{ color: "black" }}>
+                <GitHubIcon />
+              </Link>
+            </div>
+          )}
+          {linkedIn && (
+            <div>
+              <Link href={linkedIn} target="_blank" style={{ color: "black" }}>
+                <LinkedInIcon />
+              </Link>
+            </div>
+          )}
+          {twitter && (
+            <div>
+              <Link href={twitter} target="_blank" style={{ color: "black" }}>
+                <TwitterIcon />
+              </Link>
+            </div>
+          )}
+        </div>
       </ContactWrapper>
     </SectionWrapper>
   );

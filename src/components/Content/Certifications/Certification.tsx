@@ -1,4 +1,5 @@
 import { Box, styled, Button } from "@mui/material";
+import { CustomButton } from "../../../styles/sectionStyles";
 import { StyleConstants } from "../../../styles/StyleConstants";
 const CertificationWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -8,11 +9,14 @@ const CertificationWrapper = styled(Box)(({ theme }) => ({
   },
 }));
 const InfoWrapper = styled(Box)(() => ({
-  paddingRight:15,
-  lineHeight:1.53,
+  paddingRight: 15,
+  lineHeight: 1.53,
   "& .name": {
     marginBottom: 15,
     fontSize: StyleConstants.SIZE_ITEM_TITLE,
+  },
+  "& .actions": {
+    margin: "12px 0",
   },
 }));
 const ImageBox = styled(Box)(({ theme }) => ({
@@ -66,8 +70,10 @@ export const Certification = ({ certficate }: Prop) => {
             <b>Id:</b> {credentialId}
           </div>
         )}
-        <div>
-          <Button>Certificate</Button>
+        <div className="actions">
+          <CustomButton>
+            <a href={credentialUrl} target="_blank">Certificate</a>
+          </CustomButton>
         </div>
       </InfoWrapper>
       <ImageBox>

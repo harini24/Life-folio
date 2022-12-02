@@ -1,7 +1,11 @@
 import { styled, Box } from "@mui/material";
-import { StyleConstants } from "../../../styles/StyleConstants";
-import MyImage from "../../../assets/my-pic.jpg";
-import { SectionWrapper, TitleWrapper } from "../../../styles/sectionStyles";
+import MyImage from "../../../assets/pic.png";
+import Resume from "../../../assets/resume.pdf";
+import {
+  CustomButton,
+  SectionWrapper,
+  TitleWrapper,
+} from "../../../styles/sectionStyles";
 import { useEffect } from "react";
 const AboutMeContainer = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -18,17 +22,19 @@ const AboutMeContainer = styled(Box)(({ theme }) => ({
 }));
 
 const DetailsWrapper = styled(Box)(({ theme }) => ({
-  fontSize: "1.5em",
+  fontSize: 22,
   marginLeft: 15,
+  "& .actions": {
+    margin: "12px 0",
+  },
   [theme.breakpoints.down("md")]: {
     margin: "10px  0 0 0",
   },
 }));
 export const AboutMe = () => {
-
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <SectionWrapper>
@@ -36,10 +42,19 @@ export const AboutMe = () => {
       <AboutMeContainer>
         <img src={MyImage} />
         <DetailsWrapper>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-          sit earum at repudiandae ratione blanditiis, possimus et explicabo
-          sequi, voluptatibus ducimus minima error excepturi animi nisi,
-          veritatis a consequatur ad.
+          <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Dignissimos sit earum at repudiandae ratione blanditiis, possimus et
+            explicabo sequi, voluptatibus ducimus minima error excepturi animi
+            nisi, veritatis a consequatur ad.
+          </div>
+          <div className="actions">
+            <CustomButton>
+              <a href={Resume} target="_blank">
+                View Resume
+              </a>
+            </CustomButton>
+          </div>
         </DetailsWrapper>
       </AboutMeContainer>
     </SectionWrapper>

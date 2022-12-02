@@ -1,4 +1,5 @@
-import { styled, Box } from "@mui/material";
+import { styled, Box, Button } from "@mui/material";
+import { StyleConstants } from "./StyleConstants";
 
 export const SectionWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -20,4 +21,19 @@ export const TitleWrapper = styled(Box)(() => ({
   fontSize: "2em",
   paddingBottom: 50,
   fontWeight: 600,
+}));
+
+export const CustomButton = styled(Button)(() => ({
+  borderWidth: 1,
+  borderStyle: "solid",
+  borderColor: StyleConstants.BLACK_COLOR,
+  color: StyleConstants.BLACK_COLOR,
+  textTransform: "capitalize",
+  height: 36,
+  fontWeight: 500,
+
+  "& a": {
+    color: "inherit",
+    textDecoration: "none",
+  },
 }));

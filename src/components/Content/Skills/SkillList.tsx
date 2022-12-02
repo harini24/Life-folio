@@ -1,6 +1,7 @@
 import { Box, styled } from "@mui/material";
 import SoftSkill from "../../../assets/softSkills.png";
 import HardSkill from "../../../assets/hardSkills.png";
+import { StyleConstants } from "../../../styles/StyleConstants";
 interface Prop {
   skills: string[];
   type: string;
@@ -16,7 +17,7 @@ const SkillListWrapper = styled(Box)(() => ({
     width: "80%",
     textAlign: "center",
     border: "1px solid black",
-    background:'#bcd1e3',
+    background: StyleConstants.SKILLS_BG,
   },
   "& .skillIcon": {
     height: 75,
@@ -27,7 +28,7 @@ const SkillListWrapper = styled(Box)(() => ({
     border: "1px solid black",
     borderRadius: "50%",
     position: "absolute",
-    background:'#bcd1e3',
+    background: StyleConstants.SKILLS_BG,
     top: 23,
     "& img": {
       height: 58,
@@ -37,12 +38,12 @@ const SkillListWrapper = styled(Box)(() => ({
   "& .skillsList": {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: StyleConstants.SKILLS_BG,
     width: 250,
     height: 250,
     marginTop: 78,
     border: "1px solid black",
-    background:'#bcd1e3',
+    background: "#bcd1e3",
     padding: 25,
     "& div": {
       padding: 5,

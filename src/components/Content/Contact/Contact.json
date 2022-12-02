@@ -1,7 +1,9 @@
 {
-  "mobileNum": "xxxxxxxxxx",
   "emailId": "abc@gmail.com",
-  "linkedIn": "xyz",
+  "linkedIn": "linkedixyz",
+  "linkedInUrl": "linkedixyz",
   "twitter": "abc",
-  "github": "def"
+  "twitterUrl": "abc",
+  "github": "def",
+  "githubUrl": "def"
 }

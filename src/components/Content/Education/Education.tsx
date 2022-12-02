@@ -1,5 +1,6 @@
 import { Box, styled } from "@mui/material";
 import { clsx } from "clsx";
+import { StyleConstants } from "../../../styles/StyleConstants";
 interface Education {
   name?: string;
   course?: string;
@@ -23,7 +24,8 @@ const EducationWrapper = styled(Box)(({ theme }) => ({
   "& .span": {
     height: 100,
     width: 100,
-    background: "gray",
+    border: "1px solid black",
+    background: StyleConstants.EDUCATION_BG,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -37,6 +39,7 @@ const EducationWrapper = styled(Box)(({ theme }) => ({
   },
   "& .description": {
     border: "1px solid black",
+    background: StyleConstants.EDUCATION_BG,
     padding: 15,
     width: 450,
     [theme.breakpoints.down("md")]: {

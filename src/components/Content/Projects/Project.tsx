@@ -1,5 +1,6 @@
-import { Box, styled, Button } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import ProjectImg from "../../../assets/project.jpg";
+import { CustomButton } from "../../../styles/sectionStyles";
 import { StyleConstants } from "../../../styles/StyleConstants";
 interface project {
   name?: string;
@@ -17,6 +18,9 @@ const InfoWrapper = styled(Box)(() => ({
   },
   "& .desc": {
     padding: 10,
+  },
+  "& .actions button": {
+    margin: "0 12px 12px 0",
   },
 }));
 const ProjectWrapper = styled(Box)(({ theme }) => ({
@@ -47,9 +51,17 @@ export const Project = ({ project }: Prop) => {
       <InfoWrapper>
         <div className="name bold">{name}</div>
         <div className="desc">{description}</div>
-        <div>
-          <Button>Source Code</Button>
-          <Button>Demo</Button>
+        <div className="actions">
+          <CustomButton>
+            <a href={sourceCode} target="_blank">
+              Source Code
+            </a>
+          </CustomButton>
+          <CustomButton>
+            <a href={demoLink} target="_blank">
+              Demo
+            </a>
+          </CustomButton>
         </div>
       </InfoWrapper>
       <ImageBox>
