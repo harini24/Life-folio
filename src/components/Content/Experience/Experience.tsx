@@ -4,6 +4,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import Securin from "../../../assets/securin.jpg";
 import Verizon from "../../../assets/verizon.jpg";
 import { StyleConstants } from "../../../styles/StyleConstants";
+import { useEffect } from "react";
 interface Experience {
   span?: string;
   company?: string;
@@ -91,6 +92,10 @@ const Experience = ({ experience }: Prop) => {
     linkedIn = "",
     progress = [],
   } = experience;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Wrapper>
       <CompanyWrapper>

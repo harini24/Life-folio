@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import { Box, Grid } from "@mui/material";
 import { SectionWrapper, TitleWrapper } from "../../../styles/sectionStyles";
 import { SkillList } from "./SkillList";
 import Skills from "./Skills.json";
 export const SkillsContainer = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <SectionWrapper>
       <TitleWrapper>SKILLS</TitleWrapper>

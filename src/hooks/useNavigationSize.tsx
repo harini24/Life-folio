@@ -24,7 +24,9 @@ export const useNavigationSize = () => {
       ? 7
       : (size.height || 0) > 800
       ? 5
-      : 4
+      : (size.height || 0) > 720
+      ? 4
+      : 3
     : (size.width || 0) >= 800
     ? 7
     : (size.width || 0) > 700

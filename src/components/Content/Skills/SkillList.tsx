@@ -52,7 +52,7 @@ const SkillListWrapper = styled(Box)(() => ({
 export const SkillList = ({ type, skills }: Prop) => {
   return (
     <SkillListWrapper>
-      <Box className="skillType">{`${
+      <Box className="skillType bold">{`${
         type === "softSkills" ? "Soft" : "Hard"
       } Skills`}</Box>
       <Box className="skillIcon">

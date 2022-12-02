@@ -2,6 +2,7 @@ import { styled, Box } from "@mui/material";
 import { StyleConstants } from "../../../styles/StyleConstants";
 import MyImage from "../../../assets/my-pic.jpg";
 import { SectionWrapper, TitleWrapper } from "../../../styles/sectionStyles";
+import { useEffect } from "react";
 const AboutMeContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   alignSelf: "center",
@@ -24,6 +25,11 @@ const DetailsWrapper = styled(Box)(({ theme }) => ({
   },
 }));
 export const AboutMe = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <SectionWrapper>
       <TitleWrapper>About Me</TitleWrapper>
