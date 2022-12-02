@@ -1,4 +1,4 @@
-import { Box, Fade  } from "@mui/material";
+import { Box, Fade } from "@mui/material";
 import { useSelector } from "react-redux";
 import { IRootState } from "../../../store/types";
 import { sectionsInfo } from "../utils";
@@ -11,7 +11,8 @@ export const SectionsRoot = () => {
   return (
     <>
       {sections.map(({ key, name }) => (
-        <Fade 
+        <Fade
+          key={key}
           in={key === selectedSection}
           {...(key === selectedSection ? { timeout: 1500 } : {})}
           easing={{
@@ -20,7 +21,7 @@ export const SectionsRoot = () => {
           }}
         >
           <div>{key === selectedSection && sectionsInfo[key]?.component}</div>
-        </Fade >
+        </Fade>
       ))}
     </>
   );

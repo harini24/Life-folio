@@ -35,5 +35,7 @@ export const useNavigationSize = () => {
     ? 5
     : (size.width || 0) > 560
     ? 4
-    : 3;
+    : (size.width || 0) > 420
+    ? 3
+    : 2;
 };

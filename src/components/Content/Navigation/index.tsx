@@ -112,6 +112,7 @@ export const NavigationList = () => {
       )}
       {filteredSections.slice(start, start + limit).map((sec) => (
         <Box
+        key={sec.key}
           className={`nav-section ${selectedSection === sec.key && "active"}`}
         >
           <Box

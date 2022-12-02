@@ -11,8 +11,8 @@ export const ProjectsContainer = () => {
     <SectionWrapper>
       <TitleWrapper>PROJECTS</TitleWrapper>
       <Box>
-        {projects.map((project) => (
-          <Project project={project} />
+        {projects.map((project,ind) => (
+          <Project project={project} key={ind}/>
         ))}
       </Box>
     </SectionWrapper>

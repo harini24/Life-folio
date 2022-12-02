@@ -13,7 +13,7 @@ export const CertificationsContainer = () => {
       <TitleWrapper>LICENSES & CERTIFICATIONS</TitleWrapper>
       <Box>
         {Certifications.map((certficate) => (
-          <Certification certficate={certficate} />
+          <Certification certficate={certficate} key={certficate.name} />
         ))}
       </Box>
     </SectionWrapper>

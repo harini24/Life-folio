@@ -1,10 +1,11 @@
+import { Fragment } from "react";
 import { Box, styled, Link } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Securin from "../../../assets/securin.jpg";
 import Verizon from "../../../assets/verizon.jpg";
 import { StyleConstants } from "../../../styles/StyleConstants";
-import { useEffect } from "react";
+import { Key, useEffect } from "react";
 interface Experience {
   span?: string;
   company?: string;
@@ -71,6 +72,9 @@ const CompanyWrapper = styled(Box)(({ theme }) => ({
 }));
 const DescriptionWrapper = styled(Box)(({ theme }) => ({
   width: 450,
+  [theme.breakpoints.down("md")]: {
+    paddingTop: 12,
+  },
   [theme.breakpoints.down("sm")]: {
     width: 370,
   },
@@ -123,18 +127,20 @@ const Experience = ({ experience }: Prop) => {
       <DescriptionWrapper>
         {progress.map((prog: any) => {
           return (
-            <>
+            <div key={prog.company}>
               <div className="role bold">{prog.role}</div>
               <div className="span">{prog.span}</div>
               <div className="description-wrapper">
-                {prog.descriptions.map((desc: string) => (
-                  <div className="description">
-                    <div className="bullet" />
-                    {desc}
-                  </div>
-                ))}
+                {prog.descriptions.map(
+                  (desc: string, ind: Key | null | undefined) => (
+                    <div className="description" key={ind}>
+                      <div className="bullet" />
+                      {desc}
+                    </div>
+                  )
+                )}
               </div>
-            </>
+            </div>
           );
         })}
       </DescriptionWrapper>
