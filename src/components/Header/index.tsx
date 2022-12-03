@@ -1,4 +1,5 @@
 import { styled, Box } from "@mui/material";
+import { Constants } from "../../data/constants";
 import { StyleConstants } from "../../styles/StyleConstants";
 
 const IntroductionContainer = styled(Box)(({ theme }) => ({
@@ -20,7 +21,7 @@ const IntroductionContainer = styled(Box)(({ theme }) => ({
 export const Header = () => {
   return (
     <IntroductionContainer>
-      (Lif)E - portfolio of Harini Sivakumar
+      (Lif)E - portfolio of {Constants.USERNAME}
     </IntroductionContainer>
   );
 };
