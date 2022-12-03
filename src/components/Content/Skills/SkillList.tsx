@@ -61,7 +61,7 @@ export const SkillList = ({ type, skills }: Prop) => {
       </Box>
       <Box className="skillsList">
         {skills.map((skill, ind) => (
-          <div key={ind}>{`${ind + 1}. ${skill}`}</div>
+          <div key={ind}>{`${ind + 1}) ${skill}`}</div>
         ))}
       </Box>
     </SkillListWrapper>

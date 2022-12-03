@@ -1,5 +1,6 @@
 import { Box, styled } from "@mui/material";
 import ProjectImg from "../../../assets/project.jpg";
+import { projectImage } from "../../../data/constants";
 import { CustomButton } from "../../../styles/sectionStyles";
 import { StyleConstants } from "../../../styles/StyleConstants";
 interface project {
@@ -25,7 +26,7 @@ const InfoWrapper = styled(Box)(() => ({
 }));
 const ProjectWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
-  justifyContent:"space-between",
+  justifyContent: "space-between",
   marginBottom: StyleConstants.SPACE_BETWEEN_SECTIONS,
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
@@ -70,7 +71,7 @@ export const Project = ({ project }: Prop) => {
         </div>
       </InfoWrapper>
       <ImageBox>
-        <img src={ProjectImg} />
+        <img src={projectImage[name] || ProjectImg} />
       </ImageBox>
     </ProjectWrapper>
   );

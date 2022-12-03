@@ -2,10 +2,9 @@ import { Fragment } from "react";
 import { Box, styled, Link } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import Securin from "../../../assets/securin.jpg";
-import Verizon from "../../../assets/verizon.jpg";
 import { StyleConstants } from "../../../styles/StyleConstants";
 import { Key, useEffect } from "react";
+import { logo } from "../../../data/constants";
 interface Experience {
   span?: string;
   company?: string;
@@ -81,14 +80,6 @@ const DescriptionWrapper = styled(Box)(({ theme }) => ({
     width: 370,
   },
 }));
-interface Map {
-  [key: string]: string | undefined;
-}
-const logo: Map = {
-  securin: Securin,
-  verizon: Verizon,
-};
-
 const Experience = ({ experience }: Prop) => {
   const {
     company = "",
