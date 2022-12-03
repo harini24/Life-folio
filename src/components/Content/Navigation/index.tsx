@@ -10,7 +10,7 @@ import { StyleConstants } from "../../../styles/StyleConstants";
 
 const NavigationWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "row",
   justifyContent: "flex-start",
   backgroundColor: "aliceblue",
   padding: "0 20px",

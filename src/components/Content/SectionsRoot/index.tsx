@@ -11,17 +11,22 @@ export const SectionsRoot = () => {
   return (
     <>
       {sections.map(({ key, name }) => (
-        <Fade
-          key={key}
-          in={key === selectedSection}
-          {...(key === selectedSection ? { timeout: 1500 } : {})}
-          easing={{
-            enter: "linear",
-            exit: "linear",
-          }}
-        >
-          <div>{key === selectedSection && sectionsInfo[key]?.component}</div>
-        </Fade>
+        <>
+          {key === selectedSection && (
+            <Box key={key} style={{ height: "100%", display:"flex" }}>
+              <Fade
+                in={key === selectedSection}
+                {...(key === selectedSection ? { timeout: 1500 } : {})}
+                easing={{
+                  enter: "linear",
+                  exit: "linear",
+                }}
+              >
+                <div>{sectionsInfo[key]?.component}</div>
+              </Fade>
+            </Box>
+          )}
+        </>
       ))}
     </>
   );

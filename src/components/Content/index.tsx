@@ -6,13 +6,13 @@ const Wrapper = styled(Box)(({ theme }) => ({
   margin: "0 auto",
   display: "flex",
   flex: 1,
-  justifyContent: "center",
+  // justifyContent: "center",
   marginTop: 84,
-  [theme.breakpoints.down("md")]: {
+  // [theme.breakpoints.down("md")]: {
     flexDirection: "column",
     justifyContent: "flex-start",
     alignItems: "center",
-  },
+  // },
 }));
 export const ContentContainer = () => {
   return (
