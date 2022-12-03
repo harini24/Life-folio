@@ -244,3 +244,28 @@ export const projectImage: Map = {
   },
 ];
 ```
+---
+## Deployment 
+
+Once you have done with your setup. You need to put your website online!
+
+I have used [Netlify](https://netlify.com) to achieve this on the EASIEST WAY
+
+## Technologies used
+
+- [React](https://es.reactjs.org/) - Front-End JavaScript library
+- [Typescript](https://www.typescriptlang.org/) - Super set of JavaScript.
+- [Mui](https://mui.com/) - Intuitive React UI tools
+- [Redux](https://redux.js.org/) - State Container for JS Apps
+
+## Authors
+
+- **Harini Sivakumar** - [https://github.com/harini24](https://github.com/harini24)
+
+## Status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/72a45bc2-6c04-427b-84a0-b37f143ee68c/deploy-status)](https://app.netlify.com/sites/lifefolio/deploys)
+
+## License 
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
