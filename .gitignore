@@ -8,8 +8,6 @@
 # testing
 /coverage
 
-# production
-/build
 
 /src/assets/my-pic.jpg
 
