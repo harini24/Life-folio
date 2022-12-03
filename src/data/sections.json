@@ -1,26 +1,32 @@
 [
   {
     "name": "About me",
-    "key": "aboutMe"
+    "key": "aboutMe",
+    "hide":false
   },
   {
     "name": "Experience",
-    "key": "experience"
+    "key": "experience",
+    "hide":false
   },
   {
     "name": "Projects",
-    "key": "projects"
+    "key": "projects",
+    "hide":false
   },
   {
     "name": "Education",
-    "key": "education"
+    "key": "education",
+    "hide":false
   },
   {
     "name": "Skills",
-    "key": "skills"
+    "key": "skills",
+    "hide":false
   },
   {
     "name": "Certifications",
-    "key": "certifications"
+    "key": "certifications",
+    "hide":false
   }
 ]

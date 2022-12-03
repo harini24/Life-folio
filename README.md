@@ -68,7 +68,145 @@ $ npm start
 Once your server has started, go to this url `http://localhost:3000/` and you will see the website running on a Development Server:
 
 <h2 align="center">
-  <img src="https://github.com/harini24/Life-folio/demo/initial_page.png" alt="Life-folio" width="100%">
+  <img src="https://github.com/harini24/Life-folio/blob/main/demo/initial_page.png" alt="Life-folio" width="100%">
 </h2>
 
 ---
+
+## Instructions:
+
+### Step 1 - Setting up Header
+
+By befault the header element would be displaying "(Lif)E - portfolio of Your Name".\
+To replace "your Name" with expected text, Go to "src\data\constants.tsx" and under the Constants change value of USERNAME with expected text.
+
+```javascript
+export enum Constants {
+  USERNAME = "Your Name",
+}
+```
+
+### Step 2 - Setting up Footer
+
+Go to 'src\data\Contact.json' and provide the required contact infomation data in the respective fields
+
+```javascript
+{
+  "emailId": "userName@gmail.com",
+  "linkedIn": "https://www.linkedin.com/",
+  "twitter": "https://twitter.com/home",
+  "github": "https://github.com/"
+}
+```
+
+### Step 3 - Setting up sections
+
+Go to 'src\data\sections.json', this file contains list of the Life-folio sections for which the informations can be set.\
+To Disable any section as per requirement, the hide property have be set to True.\
+For example if, Projects sections is to be disabled
+
+```javascript
+{
+  "name": "Projects",
+  "key": "projects",
+  "hide": true
+}
+```
+
+### Step 4 - Setting up the data of sections
+
+Under 'src\data', you will find multiple json named "AboutMe.json", "Experience.json", "Education.json", "Projects.json", "Skills.json" and "Certifications.json".\
+Each respective to About Me, Experience, Education, Projects, Skills and Certification sections.
+
+AboutMe.json
+
+```javascript
+{
+  "aboutMe": ""
+}
+```
+
+Experience.json
+
+```javascript
+[
+  {
+    span: "Year Month -  current",
+    company: "",
+    linkedIn: "",
+    twitter: "",
+    location: "City, State",
+    progress: [
+      {
+        role: "Role Name",
+        span: "Year Month - Current",
+        descriptions: [
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+          "In commodi consequatur quidem? Nemo officiis inventore praesentium hic saepe ut delectus",
+        ],
+      },
+    ],
+  },
+];
+```
+
+Education.json
+
+```javascript
+[
+  {
+    name: "Institute name",
+    location: "City, State",
+    course: "Course Name",
+    span: "year - year",
+    specialization: "major name",
+    score: "",
+  },
+];
+```
+
+Projects.json
+
+```javascript
+[
+  {
+    name: "Project name 1",
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    sourceCode: "",
+    demoLink: "",
+  },
+];
+```
+
+Skills.json
+
+```javascript
+{
+  softSkills: [
+    "Skill name",
+    "Skill name",
+    "Skill name",
+  ],
+  hardSkills: [
+    "Skill name",
+    "Skill name",
+    "Skill name",
+  ]
+}
+```
+
+Certifications.json
+
+```javascript
+[
+  {
+    name: "Certificate Name 1",
+    org: "Issued Org name",
+    issued: "month year",
+    expiry: "",
+    credentialId: "",
+    credentialUrl: "",
+    url: "",
+  },
+];
+```

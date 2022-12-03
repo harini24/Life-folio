@@ -6,6 +6,7 @@ import {
   SectionWrapper,
   TitleWrapper,
 } from "../../../styles/sectionStyles";
+import aboutMeInfo from '../../../data/AboutMe.json'
 import { useEffect } from "react";
 const AboutMeContainer = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -43,10 +44,7 @@ export const AboutMe = () => {
         <img src={MyImage} />
         <DetailsWrapper>
           <div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Dignissimos sit earum at repudiandae ratione blanditiis, possimus et
-            explicabo sequi, voluptatibus ducimus minima error excepturi animi
-            nisi, veritatis a consequatur ad.
+            {aboutMeInfo.aboutMe}
           </div>
           <div className="actions">
             <CustomButton>
