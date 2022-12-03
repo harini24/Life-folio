@@ -1,3 +1,11 @@
+# Life-Folio
+
+## A clean, cool yet quirky portfolio template for Developers
+
+To view a demo, **[click here](https://gatsby-simplefolio.netlify.com/)**
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
