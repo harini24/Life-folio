@@ -1,41 +1,41 @@
 [
   {
-    "span": "2021 September -  current",
-    "company": "Securin",
-    "linkedIn": "https://www.linkedin.com/company/securin/",
-    "twitter": "https://twitter.com/Securin_io",
-    "location": "Chennai, Tamil Nadu",
+    "span": "Year Month -  current",
+    "company": "Google",
+    "linkedIn": "https://www.linkedin.com/company/google/",
+    "twitter": "https://twitter.com/googleindia",
+    "location": "City, State",
     "progress": [
       {
-        "role": "Associate Software Engineer - 2",
-        "span": "2022 April - Current",
+        "role": "Role Name",
+        "span": "Year Month - Current",
         "descriptions": [
-          "test jdjksfhds q",
-          "sdskhdush shdushfud udhfuhdsfyuds dfyudysfd ydfysdyu"
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+          "In commodi consequatur quidem? Nemo officiis inventore praesentium hic saepe ut delectus"
         ]
       },
       {
-        "role": "Associate Software Engineer - 1",
-        "span": "2021 September - 2022 April",
+        "role": "Role Name",
+        "span": "Year Month - Year Month",
         "descriptions": [
-          "Led complete revamp of existing multiple Jquery pages of application into React, adhering to best and standard practices"
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. In commodi consequatur quidem? Nemo officiis inventore praesentium hic saepe ut delectus"
         ]
       }
     ]
   },
   {
-    "span": "2019 July - 2021 September",
-    "company": "Verizon",
-    "location": "Chennai, Tamil Nadu",
-    "linkedIn": "https://www.linkedin.com/company/verizon/",
-    "twitter": "https://twitter.com/Verizon",
+    "span": "Year July - Year Month",
+    "company": "Google",
+    "location": "City, State",
+    "linkedIn": "https://www.linkedin.com/company/google/",
+    "twitter": "https://twitter.com/googleindia",
     "progress": [
       {
-        "role": "Software development Engrg",
-        "span": "2019 July - 2021 September",
+        "role": "Role Name",
+        "span": "Year Month - Year Month",
         "descriptions": [
-          "Designed and developed Guided support(GIF Integration), used in retail stores to generate visual and step by step solution to customer queries and issues",
-          "Boosted efficiencies in retail stores by developing feature Click to Chat, connecting retail agents with core agent dynamically within chatbots, reducing queue time of customers."
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. In commodi consequatur quidem? Nemo officiis inventore praesentium hic saepe ut delectus",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. In commodi consequatur quidem? Nemo officiis inventore praesentium hic saepe ut delectus"
         ]
       }
     ]

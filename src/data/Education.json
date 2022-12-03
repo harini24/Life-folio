@@ -1,26 +1,26 @@
 [
   {
-    "name": "BSA Crescent Institute of Science and Technology",
-    "location": "Chennai, Tamil Nadu",
-    "course": "B.Tech",
-    "span": "2015 - 2019",
-    "specialization": "Computer Science",
-    "score": "8.9 CGPA"
+    "name": "Institute name",
+    "location": "City, State",
+    "course": "Course Name",
+    "span": "year - year",
+    "specialization": "major name",
+    "score": "9 CGPA"
   },
   {
-    "name": "Kurinji Metriculation Hr Sec School",
-    "location": "Namakkal, Tamil Nadu",
-    "course": "HSC",
-    "span": "2014-2015",
-    "specialization": "Computer Science",
-    "score": "96 %"
+    "name": "Institute name",
+    "location": "City, State",
+    "course": "Course Name",
+    "span": "year-year",
+    "specialization": "major name",
+    "score": "90 %"
   },
   {
-    "name": "E.S Metriculation Hr Sec School",
-    "location": "Villupuram, Tamil Nadu",
-    "course": "SSLC",
-    "span": "2012-2013",
+    "name": "Institute name",
+    "location": "City, State",
+    "course": "Course Name",
+    "span": "year-year",
     "specialization": "",
-    "score": "97 %"
+    "score": "90 %"
   }
 ]

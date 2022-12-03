@@ -1,9 +1,6 @@
 {
-  "emailId": "abc@gmail.com",
-  "linkedIn": "linkedixyz",
-  "linkedInUrl": "linkedixyz",
-  "twitter": "abc",
-  "twitterUrl": "abc",
-  "github": "def",
-  "githubUrl": "def"
+  "emailId": "userName@gmail.com",
+  "linkedIn": "https://www.linkedin.com/",
+  "twitter": "https://twitter.com/home",
+  "github": "https://github.com/"
 }

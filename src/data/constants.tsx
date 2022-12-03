@@ -1,14 +1,14 @@
-import Securin from "../assets/securin.jpg";
+import Google from "../assets/google.jpg";
 import Verizon from "../assets/verizon.jpg";
 import ProjectImg from "../assets/project.jpg";
 export enum Constants {
-  USERNAME = "Harini Sivakumar",
+  USERNAME = "Your Name",
 }
 interface Map {
   [key: string]: string | undefined;
 }
 export const logo: Map = {
-  securin: Securin,
+  google: Google,
   verizon: Verizon,
 };
 
