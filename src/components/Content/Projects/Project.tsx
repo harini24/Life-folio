@@ -25,6 +25,7 @@ const InfoWrapper = styled(Box)(() => ({
 }));
 const ProjectWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
+  justifyContent:"space-between",
   marginBottom: StyleConstants.SPACE_BETWEEN_SECTIONS,
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
@@ -32,9 +33,13 @@ const ProjectWrapper = styled(Box)(({ theme }) => ({
 }));
 const ImageBox = styled(Box)(({ theme }) => ({
   marginRight: 10,
+  width: 400,
   "& img": {
     width: 400,
-    [theme.breakpoints.down("sm")]: {
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: 350,
+    "& img": {
       width: 350,
     },
   },
