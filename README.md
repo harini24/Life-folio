@@ -197,8 +197,6 @@ export const logo: Map = {
 
 **_Note_**: To add the image or gifs of your projects in the Project section, place the files under `src\assets` following the naming convenstion such that `<project-name>.<format>`. Then in the `src\data\constants.tsx` file, import the added files and map them accordingly with project name.
 
-Example, if company name is Google
-
 ```javascript
 import ProjectImg from "../assets/project.jpg";
 // "project name 1": ProjectImg

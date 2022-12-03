@@ -71,7 +71,7 @@ export const Project = ({ project }: Prop) => {
         </div>
       </InfoWrapper>
       <ImageBox>
-        <img src={projectImage[name.toLowerCase()] || ProjectImg} />
+        <img src={projectImage[name.toLowerCase()] || ProjectImg} alt="project"/>
       </ImageBox>
     </ProjectWrapper>
   );

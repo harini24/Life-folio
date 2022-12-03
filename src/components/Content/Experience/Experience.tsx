@@ -1,11 +1,10 @@
-import { Fragment } from "react";
 import { Box, styled, Link } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { StyleConstants } from "../../../styles/StyleConstants";
 import { Key, useEffect } from "react";
 import { logo } from "../../../data/constants";
-interface Experience {
+interface IExperience {
   span?: string;
   company?: string;
   location?: string;
@@ -14,7 +13,7 @@ interface Experience {
   progress?: any;
 }
 interface Prop {
-  experience: Experience;
+  experience: IExperience;
 }
 
 const Wrapper = styled(Box)(({ theme }) => ({
