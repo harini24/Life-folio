@@ -78,7 +78,7 @@ Once your server has started, go to this url `http://localhost:3000/` and you wi
 ### Step 1 - Setting up Header
 
 By befault the header element would be displaying "(Lif)E - portfolio of Your Name".\
-To replace "your Name" with expected text, Go to "src\data\constants.tsx" and under the Constants change value of USERNAME with expected text.
+To replace "your Name" with expected text, Go to `src\data\constants.tsx` and under the Constants change value of USERNAME with expected text.
 
 ```javascript
 export enum Constants {
@@ -88,7 +88,7 @@ export enum Constants {
 
 ### Step 2 - Setting up Footer
 
-Go to 'src\data\Contact.json' and provide the required contact infomation data in the respective fields
+Go to `src\data\Contact.json` and provide the required contact infomation data in the respective fields
 
 ```javascript
 {
@@ -101,7 +101,7 @@ Go to 'src\data\Contact.json' and provide the required contact infomation data i
 
 ### Step 3 - Setting up sections
 
-Go to 'src\data\sections.json', this file contains list of the Life-folio sections for which the informations can be set.\
+Go to `src\data\sections.json`, this file contains list of the Life-folio sections for which the informations can be set.\
 To Disable any section as per requirement, the hide property have be set to True.\
 For example if, Projects sections is to be disabled
 
@@ -115,10 +115,12 @@ For example if, Projects sections is to be disabled
 
 ### Step 4 - Setting up the data of sections
 
-Under 'src\data', you will find multiple json named "AboutMe.json", "Experience.json", "Education.json", "Projects.json", "Skills.json" and "Certifications.json".\
+Under `src\data`, you will find multiple json named "AboutMe.json", "Experience.json", "Education.json", "Projects.json", "Skills.json" and "Certifications.json".\
 Each respective to About Me, Experience, Education, Projects, Skills and Certification sections.
 
-AboutMe.json
+#### AboutMe.json
+
+**_Note_**: To replace the image in About me section with your image, under `src\assets` replace the `pic.png` file.
 
 ```javascript
 {
@@ -126,7 +128,8 @@ AboutMe.json
 }
 ```
 
-Experience.json
+#### Experience.json
+
 
 ```javascript
 [
@@ -149,8 +152,22 @@ Experience.json
   },
 ];
 ```
+**_Note_**: To add the image of companies you have been employed with in the Employment section, place the files under `src\assets` following the naming convenstion such that `<company-name>.<format>`. Then in the `src\data\constants.tsx` file, import the added files and map them accordingly with company name.
 
-Education.json
+Example, if company name is Google
+
+```javascript
+import Google from "../assets/google.jpg";
+
+// google : Google
+// google - company name mentioned in Experience.json (lower cased)
+// Google - imported name 
+export const logo: Map = {
+  google: Google,
+  verizon: Verizon,
+};
+```
+#### Education.json
 
 ```javascript
 [
@@ -165,7 +182,7 @@ Education.json
 ];
 ```
 
-Projects.json
+#### Projects.json
 
 ```javascript
 [
@@ -178,7 +195,21 @@ Projects.json
 ];
 ```
 
-Skills.json
+**_Note_**: To add the image or gifs of your projects in the Project section, place the files under `src\assets` following the naming convenstion such that `<project-name>.<format>`. Then in the `src\data\constants.tsx` file, import the added files and map them accordingly with project name.
+
+Example, if company name is Google
+
+```javascript
+import ProjectImg from "../assets/project.jpg";
+// "project name 1": ProjectImg
+// "project name 1" - project name mentioned in Projects.json (lower cased)
+// ProjectImg - imported name 
+export const projectImage: Map = {
+  "project name 1": ProjectImg,
+};
+```
+
+#### Skills.json
 
 ```javascript
 {
@@ -195,7 +226,7 @@ Skills.json
 }
 ```
 
-Certifications.json
+#### Certifications.json
 
 ```javascript
 [
