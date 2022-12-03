@@ -2,7 +2,12 @@
 
 ## A clean, cool yet quirky portfolio template for Developers
 
-To view a demo, **[click here]**
+<h2 align="center">
+  <img src="https://github.com/harini24/Life-folio/blob/main/demo/Life-folio.gif" alt="Gatsby Simplefolio" width="600px" />
+  <br>
+</h2>
+
+To view a demo, **[click here](https://github.com/harini24/Life-folio/blob/main/demo/Life-folio.gif)**
 
 ---
 
