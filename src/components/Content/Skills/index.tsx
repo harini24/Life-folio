@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Box, Grid } from "@mui/material";
 import { SectionWrapper, TitleWrapper } from "../../../styles/sectionStyles";
 import { SkillList } from "./SkillList";
-import Skills from "./Skills.json";
+import Skills from "../../../data/Skills.json";
 export const SkillsContainer = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

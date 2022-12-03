@@ -50,6 +50,8 @@ const CompanyWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   "& .logo": {
     marginRight: 10,
+    height: 85,
+    width: 85,
     "& img": {
       height: 85,
       width: 85,

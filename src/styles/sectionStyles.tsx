@@ -7,11 +7,11 @@ export const SectionWrapper = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   width: 800,
   height: "100%",
-  padding: "0 0 0 45px",
+  padding: "45px 0",
   boxSizing: "border-box",
   [theme.breakpoints.down("md")]: {
     width: 575,
-    margin: 45,
+    padding: "20px 0",
   },
   [theme.breakpoints.down("sm")]: {
     width: 370,
@@ -19,10 +19,13 @@ export const SectionWrapper = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const TitleWrapper = styled(Box)(() => ({
+export const TitleWrapper = styled(Box)(({ theme })=> ({
   fontSize: "2em",
   paddingBottom: 50,
   fontWeight: 600,
+  [theme.breakpoints.down("md")]: {
+    paddingBottom: 25,
+  }
 }));
 
 export const CustomButton = styled(Button)(() => ({

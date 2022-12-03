@@ -1,6 +1,6 @@
 import { styled, Box, Stack, Link } from "@mui/material";
 import { StyleConstants } from "../../styles/StyleConstants";
-import Contact from "./Contact.json";
+import Contact from "../../data/Contact.json";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";

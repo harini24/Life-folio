@@ -19,15 +19,7 @@ export const useNavigationSize = () => {
       window.removeEventListener("resize", handleSize);
     };
   }, []);
-  return (size.width || 0) >= 1075
-    ? (size.height || 0) >= 920
-      ? 7
-      : (size.height || 0) > 800
-      ? 5
-      : (size.height || 0) > 720
-      ? 4
-      : 3
-    : (size.width || 0) >= 800
+  return (size.width || 0) >= 800
     ? 7
     : (size.width || 0) > 700
     ? 6

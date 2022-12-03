@@ -11,11 +11,14 @@ import { StyleConstants } from "../../../styles/StyleConstants";
 const NavigationWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
-  justifyContent: "flex-start",
-  backgroundColor: "aliceblue",
+  justifyContent: "center",
+  backgroundColor: StyleConstants.NAVIGATION_BG,
   padding: "0 20px",
+  borderRadius:12,
   position: "sticky",
-  top: 85,
+  width: "100%",
+  zIndex: 1,
+  top: 84,
   "& .nav-section": {
     padding: 8,
     display: "flex",
@@ -56,13 +59,14 @@ const NavigationWrapper = styled(Box)(({ theme }) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    transform: "rotate(271deg)",
     "& img": {
       height: 58,
       width: 58,
     },
   },
   "& .before": {
-    transform: "rotate(180deg)",
+    transform: "rotate(90deg)",
   },
   "& .disabled": {
     opacity: "0.1",
@@ -76,18 +80,9 @@ const NavigationWrapper = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down("md")]: {
     padding: 8,
-    zIndex: 1,
-    flexDirection: "row",
-    width: "100%",
     justifyContent: "center",
     "& .nav-section": {
       padding: "0 3px",
-    },
-    "& .before": {
-      transform: "rotate(90deg)",
-    },
-    "& .after": {
-      transform: "rotate(271deg)",
     },
   },
 }));

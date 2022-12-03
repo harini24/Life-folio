@@ -3,6 +3,7 @@ import { CustomButton } from "../../../styles/sectionStyles";
 import { StyleConstants } from "../../../styles/StyleConstants";
 const CertificationWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
+  justifyContent: "space-between",
   marginBottom: StyleConstants.SPACE_BETWEEN_SECTIONS,
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
@@ -21,9 +22,15 @@ const InfoWrapper = styled(Box)(() => ({
 }));
 const ImageBox = styled(Box)(({ theme }) => ({
   marginRight: 10,
+  width: 400,
+  minHeight:250,
+  border:"1px solid black",
   "& img": {
     width: 400,
-    [theme.breakpoints.down("sm")]: {
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: 350,
+    "& img": {
       width: 350,
     },
   },
@@ -72,12 +79,14 @@ export const Certification = ({ certficate }: Prop) => {
         )}
         <div className="actions">
           <CustomButton>
-            <a href={credentialUrl} target="_blank">Certificate</a>
+            <a href={credentialUrl} target="_blank">
+              Certificate
+            </a>
           </CustomButton>
         </div>
       </InfoWrapper>
       <ImageBox>
-        <img src={url} />
+        <img src={url} alt="certificate"/>
       </ImageBox>
     </CertificationWrapper>
   );

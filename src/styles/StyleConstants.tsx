@@ -7,6 +7,7 @@ export enum StyleConstants {
   BLACK_COLOR = "#000000",
   SKILLS_BG = "#bcd1e3",
   EDUCATION_BG = "#bcd1e3",
+  NAVIGATION_BG = "#cfe3f2",
 
   SPACE_BETWEEN_SECTIONS = 65,
 
