@@ -125,7 +125,8 @@ Each respective to About Me, Experience, Education, Projects, Skills and Certifi
 
 #### AboutMe.json
 
-**_Note_**: To replace the image in About me section with your image, under `src\assets` replace the `pic.png` file.
+**_Note_**: To replace the image and resume in About me section with your image, under `src\assets` replace the `pic.png` and `resume.pdf` file.
+
 
 ```javascript
 {
