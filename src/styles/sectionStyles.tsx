@@ -19,13 +19,13 @@ export const SectionWrapper = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const TitleWrapper = styled(Box)(({ theme })=> ({
+export const TitleWrapper = styled(Box)(({ theme }) => ({
   fontSize: "2em",
   paddingBottom: 50,
   fontWeight: 600,
   [theme.breakpoints.down("md")]: {
     paddingBottom: 25,
-  }
+  },
 }));
 
 export const CustomButton = styled(Button)(() => ({
@@ -37,6 +37,24 @@ export const CustomButton = styled(Button)(() => ({
   height: 36,
   fontWeight: 500,
 
+  "& a": {
+    color: "inherit",
+    textDecoration: "none",
+  },
+  "&:hover": { backgroundColor: StyleConstants.HEADER },
+}));
+
+export const CustomButtonFooter = styled(Button)(() => ({
+  borderWidth: 1,
+  borderStyle: "solid",
+  borderColor: "rgba(0,0,0,0.8)",
+  backgroundColor: "rgba(0,0,0,0.8)",
+  color: StyleConstants.WHITE_COLOR,
+  textTransform: "capitalize",
+  height: 20,
+  fontWeight: 600,
+  fontSize: 12,
+  "&:hover": { backgroundColor: StyleConstants.HEADER },
   "& a": {
     color: "inherit",
     textDecoration: "none",

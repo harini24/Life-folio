@@ -36,7 +36,7 @@ const ImageBox = styled(Box)(({ theme }) => ({
   marginRight: 10,
   width: 400,
   "& img": {
-    border:"1px solid black",
+    border: "1px solid black",
     width: 400,
   },
   [theme.breakpoints.down("sm")]: {
@@ -60,19 +60,22 @@ export const Project = ({ project }: Prop) => {
         <div className="desc">{description}</div>
         <div className="actions">
           <CustomButton>
-            <a href={sourceCode} target="_blank">
+            <a href={sourceCode} target="_blank" rel="noreferrer">
               Source Code
             </a>
           </CustomButton>
           <CustomButton>
-            <a href={demoLink} target="_blank">
+            <a href={demoLink} target="_blank" rel="noreferrer">
               Demo
             </a>
           </CustomButton>
         </div>
       </InfoWrapper>
       <ImageBox>
-        <img src={projectImage[name.toLowerCase()] || ProjectImg} alt="project"/>
+        <img
+          src={projectImage[name.toLowerCase()] || ProjectImg}
+          alt="project"
+        />
       </ImageBox>
     </ProjectWrapper>
   );

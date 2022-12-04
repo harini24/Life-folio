@@ -23,8 +23,8 @@ const InfoWrapper = styled(Box)(() => ({
 const ImageBox = styled(Box)(({ theme }) => ({
   marginRight: 10,
   width: 400,
-  minHeight:250,
-  border:"1px solid black",
+  minHeight: 250,
+  border: "1px solid black",
   "& img": {
     width: 400,
   },
@@ -79,14 +79,14 @@ export const Certification = ({ certficate }: Prop) => {
         )}
         <div className="actions">
           <CustomButton>
-            <a href={credentialUrl} target="_blank">
+            <a href={credentialUrl} target="_blank" rel="noreferrer">
               Certificate
             </a>
           </CustomButton>
         </div>
       </InfoWrapper>
       <ImageBox>
-        <img src={url} alt="certificate"/>
+        <img src={url} alt="certificate" />
       </ImageBox>
     </CertificationWrapper>
   );

@@ -6,7 +6,7 @@ import {
   SectionWrapper,
   TitleWrapper,
 } from "../../../styles/sectionStyles";
-import aboutMeInfo from '../../../data/AboutMe.json'
+import aboutMeInfo from "../../../data/AboutMe.json";
 import { useEffect } from "react";
 const AboutMeContainer = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -43,12 +43,10 @@ export const AboutMe = () => {
       <AboutMeContainer>
         <img src={MyImage} />
         <DetailsWrapper>
-          <div>
-            {aboutMeInfo.aboutMe}
-          </div>
+          <div>{aboutMeInfo.aboutMe}</div>
           <div className="actions">
             <CustomButton>
-              <a href={Resume} target="_blank">
+              <a href={Resume} rel="noreferrer" target="_blank">
                 View Resume
               </a>
             </CustomButton>

@@ -104,12 +104,22 @@ const Experience = ({ experience }: Prop) => {
           <div>{span}</div>
           <div>
             {linkedIn && (
-              <Link href={linkedIn} target="_blank" style={{ color: "black" }}>
+              <Link
+                href={linkedIn}
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: "black" }}
+              >
                 <LinkedInIcon style={{ marginRight: 6 }} />
               </Link>
             )}
             {twitter && (
-              <Link href={twitter} target="_blank" style={{ color: "black" }}>
+              <Link
+                href={twitter}
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: "black" }}
+              >
                 <TwitterIcon />
               </Link>
             )}

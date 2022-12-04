@@ -5,8 +5,8 @@ import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { CustomButtonFooter } from "../../styles/sectionStyles";
 const FooterContainer = styled(Box)(({ theme }) => ({
-  // position: "fixed",
   height: 150,
   width: "100%",
   display: "flex",
@@ -19,7 +19,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
   fontWeight: 600,
   "& .mail": {
     display: "flex",
-    padding: 12,
+    padding: 6,
     minWidth: 350,
     justifyContent: "center",
     alignItems: "center",
@@ -30,7 +30,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
   },
   "& .links": {
     display: "flex",
-    padding: 12,
+    padding: 6,
     width: 350,
     justifyContent: "space-between",
     "& svg": {
@@ -47,6 +47,19 @@ const FooterContainer = styled(Box)(({ theme }) => ({
     fontSize: 12,
     opacity: 0.85,
     padding: "0 0 5px",
+    "& a": {
+      textDecoration: "none",
+      color: StyleConstants.BLACK_COLOR,
+      "&:hover":{
+        color: StyleConstants.HEADER,
+      }
+    },
+  },
+  "& .actions": {
+    padding: 5,
+    "& button": {
+      marginRight: 6,
+    },
   },
   [theme.breakpoints.down("sm")]: {
     fontSize: 14,
@@ -83,7 +96,32 @@ export const Footer = () => {
         )}
       </Box>
       <Box className="divider" />
-      <Box className="creator">2022 - Template created by Harini Sivakumar</Box>
+      <Box className="creator">
+        2022 - Template created by{" "}
+        <a rel="noreferrer" href="https://github.com/harini24" target="_blank">
+          Harini Sivakumar
+        </a>
+      </Box>
+      <Box className="actions">
+        <CustomButtonFooter>
+          <a
+            rel="noreferrer"
+            href="https://github.com/harini24/Life-folio/fork"
+            target="_blank"
+          >
+            Fork
+          </a>
+        </CustomButtonFooter>
+        <CustomButtonFooter>
+          <a
+            rel="noreferrer"
+            href="https://github.com/harini24/Life-folio"
+            target="_blank"
+          >
+            Star
+          </a>
+        </CustomButtonFooter>
+      </Box>
     </FooterContainer>
   );
 };
