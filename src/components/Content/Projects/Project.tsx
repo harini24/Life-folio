@@ -36,6 +36,7 @@ const ImageBox = styled(Box)(({ theme }) => ({
   marginRight: 10,
   width: 400,
   "& img": {
+    border:"1px solid black",
     width: 400,
   },
   [theme.breakpoints.down("sm")]: {

@@ -1,4 +1,4 @@
-import { styled, Box, Stack, Link } from "@mui/material";
+import { styled, Box, Stack, Link, Divider } from "@mui/material";
 import { StyleConstants } from "../../styles/StyleConstants";
 import Contact from "../../data/Contact.json";
 import EmailIcon from "@mui/icons-material/Email";
@@ -38,8 +38,18 @@ const FooterContainer = styled(Box)(({ theme }) => ({
       fontSize: 32,
     },
   },
+  "& .divider": {
+    height: 7,
+    borderTop: "1px solid rgba(0,0,0,0.1)",
+    width: "95%",
+  },
+  "& .creator": {
+    fontSize: 12,
+    opacity: 0.85,
+    padding: "0 0 5px",
+  },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "1.45em",
+    fontSize: 14,
   },
 }));
 export const Footer = () => {
@@ -72,6 +82,8 @@ export const Footer = () => {
           </div>
         )}
       </Box>
+      <Box className="divider" />
+      <Box className="creator">2022 - Template created by Harini Sivakumar</Box>
     </FooterContainer>
   );
 };

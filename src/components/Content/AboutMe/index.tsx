@@ -23,13 +23,13 @@ const AboutMeContainer = styled(Box)(({ theme }) => ({
 }));
 
 const DetailsWrapper = styled(Box)(({ theme }) => ({
-  fontSize: 22,
+  fontSize: 16,
   marginLeft: 15,
   "& .actions": {
     margin: "12px 0",
   },
   [theme.breakpoints.down("md")]: {
-    margin: "10px  0 0 0",
+    margin: "10px 0 0 0",
   },
 }));
 export const AboutMe = () => {
