@@ -107,7 +107,7 @@ Go to `src\data\Contact.json` and provide the required contact infomation data i
 ### Step 3 - Setting up sections
 
 Go to `src\data\sections.json`, this file contains list of the Life-folio sections for which the informations can be set.\
-To Disable any section as per requirement, the hide property have be set to True.\
+To Disable any section as per requirement, the hide property have be set to true.\
 For example if, Projects sections is to be disabled
 
 ```javascript
@@ -120,13 +120,12 @@ For example if, Projects sections is to be disabled
 
 ### Step 4 - Setting up the data of sections
 
-Under `src\data`, you will find multiple json named "AboutMe.json", "Experience.json", "Education.json", "Projects.json", "Skills.json" and "Certifications.json".\
-Each respective to About Me, Experience, Education, Projects, Skills and Certification sections.
+Under `src\data`, you will find multiple json files named `AboutMe.json`, `Experience.json`, `Education.json`, `Projects.json`, `Skills.json` and `Certifications.json`.\
+Each respective to About Me, Experience, Education, Projects, Skills and Certification sections of the Life-folio.
 
 #### AboutMe.json
 
-**_Note_**: To replace the image and resume in About me section with your image, under `src\assets` replace the `pic.png` and `resume.pdf` file.
-
+Fill in the json with your date.
 
 ```javascript
 {
@@ -134,8 +133,11 @@ Each respective to About Me, Experience, Education, Projects, Skills and Certifi
 }
 ```
 
+**_Note_**: To replace the image and resume in About me section with your image own image and resume, under `src\assets` replace the `pic.png` and `resume.pdf` file.
+
 #### Experience.json
 
+Fill in the json with your date.
 
 ```javascript
 [
@@ -158,7 +160,7 @@ Each respective to About Me, Experience, Education, Projects, Skills and Certifi
   },
 ];
 ```
-**_Note_**: To add the image of companies you have been employed with in the Employment section, place the files under `src\assets` following the naming convenstion such that `<company-name>.<format>`. Then in the `src\data\constants.tsx` file, import the added files and map them accordingly with company name.
+**_Note_**: To add the image of companies you have been employed with in the Employment section, place those files under `src\assets` folder, following the naming convenstion such that `<company-name>.<format>`. Then in the `src\data\constants.tsx` file, import the added files and map them accordingly with company name.
 
 Example, if company name is Google
 
@@ -175,6 +177,8 @@ export const logo: Map = {
 ```
 #### Education.json
 
+Fill in the json with your date.
+
 ```javascript
 [
   {
@@ -189,6 +193,8 @@ export const logo: Map = {
 ```
 
 #### Projects.json
+
+Fill in the json with your date.
 
 ```javascript
 [
@@ -215,6 +221,8 @@ export const projectImage: Map = {
 
 #### Skills.json
 
+Fill in the json with your date.
+
 ```javascript
 {
   softSkills: [
@@ -231,6 +239,8 @@ export const projectImage: Map = {
 ```
 
 #### Certifications.json
+
+Fill in the json with your date.
 
 ```javascript
 [
